@@ -1,0 +1,285 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.top-header{
+    background-color: #0071dc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 11px;
+}
+
+.top-header .select-bar{
+    display: flex;
+    gap: 10px;
+    background-color: #004f9a;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.top-header .select-bar:hover{
+    background-color: #113b63;
+}
+
+.top-header .select-bar img{
+    height: 30px;
+    width: auto;
+}
+
+.search-bar{
+    display: flex;
+    background-color: white;
+    padding: 7px 18px;
+    border-radius: 32px;
+}
+
+.search-bar input{
+    border: none;
+    width: 500px;
+}
+
+.search-bar input::placeholder{
+    color: #004f9a;
+    opacity: 1;
+    font-size: 15px;
+}
+
+.search-bar input:focus-visible{
+    border: none;
+    outline: none;
+}
+
+.items{
+    display: flex;
+    color: white;
+    gap: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 32px;
+}
+
+.items:hover{
+    background-color: #113b63;
+}
+
+.items .logo{
+    padding-top: 10px;
+}
+
+.account{
+    display: flex;
+    color: white;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.account:hover{
+    background-color: #113b63;
+}
+
+.account .logo{
+    padding-top: 10px;
+}
+
+.bottom-header{
+    display: flex;
+    background-color: #f2f8fd;
+    color: #002d58;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+.bottom-header .dpt{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 32px;
+    padding: 10px;
+}
+
+.bottom-header .dpt:hover{
+    border: 1px solid #113b63;
+}
+
+.bottom-header .service{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 32px;
+    padding: 10px;
+}
+
+.bottom-header .service:hover{
+    border: 1px solid #113b63;
+}
+
+.bottom-header .sub ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-header .sub ul li a{
+    color: #002d58;
+    text-decoration: none;
+}
+
+.bottom-header .sub ul li a:hover{
+    text-decoration: underline;
+}
+
+.outer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cart{
+    background-color: #0071dc;
+    position: absolute; 
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    top: 12.5%;
+    left: 4%;
+    border-radius: 0 0 10px 10px;
+}
+
+.cart .upper{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.cart .mid{
+    background-color: #ffffff;
+    margin: 2.5px 20px;
+    font-size: small;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.cart .mid .add-address{
+    background-color: #0071dc;
+    color: #ffffff  ;
+    margin: 10px;
+    font-size: medium;
+    text-align: center;
+    justify-content: center;
+    border-radius: 32px;
+    padding: 5px;
+}
+
+.cart .lower{
+    background-color: #ffffff;
+    margin: 5px 20px;
+    margin-bottom: 20px;
+    font-size: small;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.cart .lower  .logo{
+    padding: 15px;
+    font-size: medium;
+}
+
+.order{
+    background-color: white;
+    color: gray;
+    position: absolute ;
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: auto;
+    right: 16%;
+    top: 12.6%;
+    border-radius: 0 0 10px 10px;
+}
+
+.order ul li{
+    list-style: none;
+    margin: 20px;
+}
+
+.order ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
+.order ul li a:hover{
+    text-decoration: underline;
+}
+
+.account-status{
+    background-color: white;
+    color: gray;
+    position: absolute ;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: auto;
+    right: 4%;
+    top: 12.6%;
+    border-radius: 0 0 10px 10px;
+    font-size: 13px;
+}
+
+.account-status .upper{
+    padding: 20px;
+}
+
+.account-status .upper .box{
+    background-color: #0071dc;
+    border-radius: 32px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.account-status .upper .box:hover{
+    background-color: #113b63;
+}
+
+.account-status .upper .box a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.account-status .lower{
+    padding: 20px;
+    padding-top: 0;
+}
+
+.account-status .lower ul li{
+    list-style: none;
+}
+
+.account-status .lower ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
+.account-status .lower ul li a:hover{
+    text-decoration: underline;
+}
+
+
