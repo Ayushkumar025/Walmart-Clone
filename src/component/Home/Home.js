@@ -8,19 +8,24 @@ function Home() {
       <section className='main'>
         <div className='first'>
           <div className='first-img'>
-            <a href='#'><img src='./images/goat.jpg' alt='goat' className='image-1'></img></a>
-            <div className='text-overlay'>
-              <h6>The Top Toy List is <br></br> here</h6>
-              <a href='#'>Shop now</a>
-            </div>
+            <a href='#'>
+              <img src='./images/goat.jpg' alt='goat' className='image-1'></img>
+              <div className='text-overlay'>
+                <h6>The Top Toy List is <br></br> here</h6>
+                <p>Shop now</p>
+              </div>
+            </a>
           </div>
+        </div>
+
           <div className='second-img'>
-            <a href='#'><img src='./images/small-kid.jpg' alt='small-kid'></img></a>
+            <a href='#'>
+            <img src='./images/small-kid.jpg' alt='small-kid'></img></a>
           </div>
           <div className='third-img'>
             <a href='#'><img src='./images/dino.jpg' alt='dinosaur'></img></a>
           </div>
-        </div>
+  
         <div className='second'>
           <div className='II-img-1'>
             <a href='#'><img src='./images/iphone-16.jpg' alt='iphone-16'></img></a>
