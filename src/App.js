@@ -4,6 +4,7 @@ import Header from './component/Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './component/Home/Home';
 import Contact from './component/Contact/Contact';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

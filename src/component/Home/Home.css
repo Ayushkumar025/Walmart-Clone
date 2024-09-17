@@ -10,13 +10,15 @@
     height: auto;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
 }
 
 .main img{
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 5%;
+    border-radius: 3%;
 }
 
 .main .first{
@@ -24,13 +26,188 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-} 
+}
+
+.main .first .first-img{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main .first .first-img .text-overlay{
+    position: absolute;
+    top: 10%;
+    left: 5.5%;
+    font-size: 25px;
+    color: #002d58;
+}
+
+.main .first .first-img .text-overlay p{
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 15%;
+}
+
+.main .first .first-img .text-overlay p:hover{
+    text-decoration: none;
+}
+
+.main .first .second-img{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main .first .second-img .text-overlay{
+    position: absolute;
+    color: #002d58;
+    top: 5%;
+    font-size: 35px;
+    left: 5.5%;
+}
+
+.main .first .second-img .text-overlay p{
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 10%;
+}
+
+.main .first .second-img .text-overlay p:hover{
+    text-decoration: none;
+}
+
+.main .first .third-img{
+    position: relative;
+}
+
+.main .first .third-img .text-overlay{
+    position: absolute;
+    color: #002d58;
+    top: 5%;
+    font-size: 35px;
+    left: 5.5%;
+}
+
+.main .first .third-img .text-overlay p{
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 10%;
+}
+
+.main .first .third-img .text-overlay p:hover{
+    text-decoration: none;
+}
 
 .main .second{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.main .second .II-img-1{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main .second .II-img-1 .text-overlay{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #ffffff;
+}
+
+.main .second .II-img-1 .text-overlay p{
+    font-size: 20px;
+}
+
+.main .second .II-img-1 .text-overlay span{
+    font-size: 50px;
+}
+
+.main .second .II-img-1 .text-overlay .order{
+    background-color: white;
+    color: black;
+    border-radius: 32px;
+    left: 5%;
+    top: 120%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .second .II-img-1 .text-overlay .order p{
+    font-size: 15px;
+}
+
+.main .second .II-img-1 .text-overlay .order:hover{
+    background-color: #e2e1e1;
+}
+
+.main .second .II-img-2{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main .second .II-img-2 .inner-div .inner-image-1 .text-overlay{
+    position: absolute;
+    color: #002d58;
+    top: 5%;
+    font-size: 30px;
+    left: 5.5%;
+}
+
+.main .second .II-img-2 .text-overlay p{
+    text-decoration: underline;
+    font-size: 15px;
+    margin-top: 15%;
+}
+
+.main .second .II-img-2 .text-overlay p:hover{
+    text-decoration: none;
+}
+
+.main .second .II-img-2 .inner-div{
+    display: flex;
+    gap: 20px;
+}
+
+.main .second .II-img-2 .inner-div .inner-image-2 .text-overlay{
+    position: absolute;
+    color: #002d58;
+    top: 5%;
+    font-size: 30px;
+    left: 55.5%;
+}
+
+.main .second .II-img-2 .inner-div .inner-image-2 .text-overlay p{
+    text-decoration: underline;
+    font-size: 15px;
+    margin-top: 20%;
+}
+
+.main .second .II-img-2 .inner-div .inner-image-2 .text-overlay p:hover{
+    text-decoration: none;
+}
+
+.main .second .II-img-3{
+    position: relative;
+}
+
+.main .second .II-img-3 .text-overlay{
+    position: absolute;
+    color: #002d58;
+    top: 5%;
+    font-size: 25px;
+    left: 5.5%;
+}
+
+.main .second .II-img-3 .text-overlay .terms{
+    font-size: 15px;
+}
+
+.main .second .II-img-3 .text-overlay .join{
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 10px;
 }
 
 .main .third{
@@ -40,19 +217,70 @@
     justify-content: space-between;
 }
 
-.main .first .first-img{
+.main .third .first-img{
+    margin-bottom: 20px;
     position: relative;
 }
 
-.main .first .first-img .text-overlay{
+.main .third .first-img .text-overlay{
     position: absolute;
-    top: 10%;
-    left: 1.5%;
-    font-size: 25px;
     color: #002d58;
+    top: 5%;
+    font-size: 30px;
+    left: 5.5%;
 }
 
-.main .second .II-img-2 .inner-div{
-    display: flex;
-    /* gap: 24px; */
+.main .third .first-img .text-overlay p{
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 20%;
+}
+
+.main .third .first-img .text-overlay p:hover{
+    text-decoration: none;
+}
+
+.main .third .second-img{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main .third .second-img .text-overlay{
+    position: absolute;
+    color: #002d58;
+    top: 5%;
+    font-size: 30px;
+    left: 5.5%;
+}
+
+.main .third .second-img .text-overlay p{
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 20%;
+}
+
+.main .third .second-img .text-overlay p:hover{
+    text-decoration: none;
+}
+
+.main .third .third-img{
+    position: relative;
+}
+
+.main .third .third-img .text-overlay{
+    position: absolute;
+    color: #002d58;
+    top: 5%;
+    font-size: 30px;
+    left: 5.5%;
+}
+
+.main .third .third-img .text-overlay p{
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 20%;
+}
+
+.main .third .third-img .text-overlay p:hover{
+    text-decoration: none;
 }

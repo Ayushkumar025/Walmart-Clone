@@ -139,7 +139,7 @@
 }
 
 .outer{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -215,6 +215,7 @@
     right: 16%;
     top: 12.6%;
     border-radius: 0 0 10px 10px;
+    z-index: 100;
 }
 
 .order ul li{
@@ -243,6 +244,7 @@
     top: 12.6%;
     border-radius: 0 0 10px 10px;
     font-size: 13px;
+    z-index: 100;
 }
 
 .account-status .upper{
