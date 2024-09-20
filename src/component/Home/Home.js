@@ -8,6 +8,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { CiHeart } from "react-icons/ci";
 import { PiToggleRight } from "react-icons/pi";
 import HoverVideoPlayer from 'react-hover-video-player';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const responsive = {
@@ -78,6 +79,131 @@ function Home() {
       slidesToSlide: 1
     }
   };
+
+  const products=[
+    {
+      id: 1,
+      image: "./images/e-1.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 2,
+      image: "./images/e-2.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 3,
+      image: "./images/e-3.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 4,
+      image: "./images/e-4.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 5,
+      image: "./images/e-5.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 6,
+      image: "./images/e-6.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 7,
+      image: "./images/e-7.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 8,
+      image: "./images/e-8.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 9,
+      image: "./images/e-9.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 10,
+      image: "./images/e-10.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 11,
+      image: "./images/e-11.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+    {
+      id: 12,
+      image: "./images/e-12.webp",
+      price: 27.98,
+      description: "glass pani",
+      title: "title",
+      category: "category",
+      rating: 4,
+
+    },
+  ]
+
+  const navigate=useNavigate();
   return (
     <>
     <main>
@@ -776,17 +902,21 @@ function Home() {
               responsive={slider4}
               infinite={true}
           >
+          {products.map((ele,i)=>{
+            return(
             <div class='item'>
               <div className='image'>
-                <img src='./images/e-1.webp'></img>
+                <img src={ele?.image}></img>
               </div>
               <div className='text'>
                 <h5>$19.98</h5>
                 <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
+                <button onClick={()=>navigate("/product-details",{state:ele})}>+ Add</button>
               </div>
             </div>
-            <div class='item'>
+          )
+        })}
+            {/* <div class='item'>
               <div className='image'>
                 <img src='./images/e-2.webp'></img>
               </div>
@@ -895,7 +1025,7 @@ function Home() {
                 <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
                 <button>+ Add</button>
               </div>
-            </div>
+            </div> */}
           </Carousel>
           </div>
         </div>

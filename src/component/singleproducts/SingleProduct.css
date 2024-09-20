@@ -1,0 +1,28 @@
+.product-container .container{
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+}
+
+.product-container img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-container .container .sub-container .sub{
+    border-radius: 3%;
+    
+}
+
+.product-container .container .sub-container .sub:hover{
+    border: 2px solid blue;
+}
+
+.product-container .container .sub-container .sub img{
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+}
