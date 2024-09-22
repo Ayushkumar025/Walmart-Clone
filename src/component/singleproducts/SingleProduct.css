@@ -10,19 +10,107 @@
     object-fit: contain;
 }
 
-.product-container .container .sub-container .sub{
+.product-container .container .box-1 .sub{
     border-radius: 3%;
     
 }
 
-.product-container .container .sub-container .sub:hover{
+.product-container .container .box-1 .sub:hover{
     border: 2px solid blue;
 }
 
-.product-container .container .sub-container .sub img{
+.product-container .container .box-1 .sub img{
     width: 100px;
     height: auto;
     object-fit: contain;
     justify-content: center;
     align-items: center;
+}
+
+.product-container .container .box-2{
+    flex-shrink: 0;
+    width: 45%;
+    min-width: 300px;
+}
+
+.product-container .container .box-2 .item .image{
+    cursor: pointer;
+}
+
+.product-container .container .box-2 .item .image:hover{
+    border: 1px solid black;
+}
+
+.product-container .container .box-2 .item .image image{
+    width: auto;
+    height: 640px;
+    object-fit: contain;
+}
+
+.product-container .container .box-3{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-container .container .box-3 .div-1 span{
+    background-color: #F2F8FD;
+    color: #004F9A;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.product-container .container .box-3 .div-2 a{
+    color: #202020;
+    font-size: 15px;
+}
+
+.product-container .container .box-3 .div-2 a:hover{
+    text-decoration: none;
+    color: #0071dc;
+}
+
+.product-container .container .box-3 .div-3 h1{
+    font-size: 20px;
+}
+
+.product-container .container .box-3 .div-4{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-container .container .box-3 .div-4 img{
+    width: 16px;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-container .container .box-3 .div-6 span{
+    background-color: #0071dc;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 32px;
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.product-container .container .box-3 .div-6 span:hover{
+    background-color: #004F9A;
+}
+
+.react-multiple-carousel__arrow--left{
+    left:calc(1% + 1px) !important;
+    background-color: rgba(154, 153, 153,0.5) !important;
+    border: 1px solid black !important;
+    z-index: 0 !important;
+}
+
+.react-multiple-carousel__arrow--right{
+    right:calc(1% + 1px) !important;
+    background-color: rgba(154, 153, 153,0.5) !important;
+    border: 1px solid black !important;
+    z-index: 0 !important;
 }
