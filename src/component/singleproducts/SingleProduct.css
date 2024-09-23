@@ -17,6 +17,7 @@
 
 .product-container .container .box-1 .sub:hover{
     border: 2px solid blue;
+    border-radius: 10px;
 }
 
 .product-container .container .box-1 .sub img{
@@ -25,6 +26,8 @@
     object-fit: contain;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    border-radius: 10px;
 }
 
 .product-container .container .box-2{
@@ -33,18 +36,12 @@
     min-width: 300px;
 }
 
-.product-container .container .box-2 .item .image{
+.product-container .container .box-2 .image{
     cursor: pointer;
 }
 
-.product-container .container .box-2 .item .image:hover{
+.product-container .container .box-2 .image:hover{
     border: 1px solid black;
-}
-
-.product-container .container .box-2 .item .image image{
-    width: auto;
-    height: 640px;
-    object-fit: contain;
 }
 
 .product-container .container .box-3{
@@ -75,9 +72,27 @@
     font-size: 20px;
 }
 
+.product-container .container .box-3 .star{
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.product-container .container .box-3 .star .star-3{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.product-container .container .box-3 .star .star-3:hover{
+    text-decoration: none;
+    color: #004F9A;
+}
+
 .product-container .container .box-3 .div-4{
     font-size: 12px;
     font-weight: bold;
+    display: flex;
+    gap: 5px;
 }
 
 .product-container .container .box-3 .div-4 img{
@@ -113,4 +128,29 @@
     background-color: rgba(154, 153, 153,0.5) !important;
     border: 1px solid black !important;
     z-index: 0 !important;
+}
+
+.container-2{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-2 .first span{
+    color: rgb(133, 132, 132);
+}
+
+.container-2 .second span{
+    background-color: #F2F8FD;
+    color: #004F9A;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.container-2 .slider .item .image img{
+    width: 50%;
+    height: auto;
+    object-fit: contain;
 }
