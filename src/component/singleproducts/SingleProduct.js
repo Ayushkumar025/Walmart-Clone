@@ -6,6 +6,8 @@ import 'react-multi-carousel/lib/styles.css';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
 import { GiRoundStar } from "react-icons/gi";
+import data from '../data/data';
+import { MdPadding } from 'react-icons/md';
 
 function SingleProduct() {
     const {state}=useLocation(); 
@@ -43,28 +45,51 @@ function SingleProduct() {
         slidesToSlide: 1 // optional, default to 1.
       }
     };
-    const images=[
+    const [flashes,setflashes]=useState([
       {
         id:1,
-        image:'./images/h-1.webp',
-        isActive:false
+        image:state?.subimage1,
+        isActive:true,
+        value:1
       },
       {
         id:2,
-        image:'./images/h-2.webp',
-        isActive:false
+        image:state?.subimage2,
+        isActive:false,
+        value:0
       },
       {
         id:3,
-        image:'./images/h-3.webp',
-        isActive:false
+        image:state?.subimage3,
+        isActive:false,
+        value:0
       },
       {
         id:4,
-        image:'./images/h-4.webp',
-        isActive:false
+        image:state?.subimage4,
+        isActive:false,
+        value:0
       },
-    ]
+    ])
+
+    function Update(id){
+      const data=flashes.map((ele)=>{
+        if(ele.id==id){
+          return {
+            ...ele,
+            isActive:true,
+            value:1
+          }
+        }else{
+          return {
+            ...ele,
+            isActive:false,
+            value:0,
+          }
+        }
+      })
+      setflashes(data)
+    }
     const mini=[
       {
         id:1,
@@ -88,9 +113,9 @@ function SingleProduct() {
         <main className='product-container'>
           <div className='container'>
             <div className='box-1'>
-              {images.map((ele)=>{
-                return (<div className='sub'>
-                <img src={ele?.image}></img>
+              {flashes.map((ele)=>{
+                return (<div className='sub' onClick={()=>Update(ele.id)}>
+                <img src={ele?.image} style={{border:ele.isActive && '2px solid blue'}}></img>
               </div>)
               })}
             </div>
@@ -102,8 +127,8 @@ function SingleProduct() {
                 infinite={true}
                 mouseDrag={true}
               > 
-                  {images.map((ele,i)=>{
-                    return (<div className='image'>
+                  {JSON.parse(JSON.stringify(flashes)).sort((a,b) => b.value - a.value).map((ele,i)=>{
+                    return (<div className='image' >
                     <InnerImageZoom src={ele?.image} zoomType='hover' />
                   </div>)
                   })}
@@ -119,7 +144,7 @@ function SingleProduct() {
                 <a href='#'>Way To Celebrate</a>
               </div>
               <div className='div-3'>
-                <h1>Halloween 10-Count Orange Pumpkin Lantern LED Lights, 6.5', by Way To Celebrate</h1>
+                <h1>{state?.description}</h1>
               </div>
               <div className='star'>
                 <div className='star-1'>
@@ -145,44 +170,80 @@ function SingleProduct() {
                 </div>
               </div>
               <div className='div-5'>
-                <h1>$10.98</h1>
+                <h1>${state?.price}</h1>
               </div>
               <div className='div-6'>
                 <span>Add to cart</span>
               </div>
+              <div className='div-7'>
+                <div className='heading'>
+                  <h1 style={{fontSize:'20px'}}>How do you want your item</h1>
+                </div>
+                <div className='sub'>
+                  <div className="sub-upper">
+                    <img src="./images/truck.png" width={32} height={32}></img>
+                    <h5>Shipping</h5>
+                    <span>Arives in 5 days</span>
+                  </div>
+                  <div className="sub-upper">
+                    <img src="./images/car.png" width={32} height={32}></img>
+                    <h5>Pickup</h5>
+                    <span>Available</span>
+                  </div>
+                  <div className="sub-upper">
+                    <img src="./images/bag.png" width={32} height={32}></img>
+                    <h5>Delivery</h5>
+                    <span>Available</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <section className='container-2'>
+            <div className='first'>
+              <h1>Popular items in this category</h1>
+              <span>Best selling items that customers love</span>
+            </div>
+            <div className='second'>
+              <span className='best-seller'>
+                Best seller
+              </span>
+            </div>
+            <div className='slider'>
+              <Carousel
+                  responsive={slider}
+                  infinite={true}
+              >
+                {mini.map((ele,i)=>{
+                  return (
+                    <div class='item'>
+                      <div className='image'>
+                        <img src={ele?.image}></img>
+                      </div>
+                      <div className='text'>
+                        <h5>$19.98</h5>
+                        <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
+                      </div>
+                    </div>)
+                })}
+              </Carousel>
+            </div>
+          </section>
+          <section className='about'>
+            <div className='heading' style={{padding:'30px'}}>
+              <h1>About this item</h1>
+            </div>
+            <hr style={{marginLeft:'30px', marginRight:'30px'} }></hr>
+            <div className='main'>
+              <div className='sub-heading'>
+                <span>Product details</span>
+              </div>
+              <div className='detail'>
+                <p>{state?.aboutitem}</p>
+              </div>
+            </div>
+          </section>
         </main>
-        <section className='container-2'>
-          <div className='first'>
-            <h1>Popular items in this category</h1>
-            <span>Best selling items that customers love</span>
-          </div>
-          <div className='second'>
-            <span className='best-seller'>
-              Best seller
-            </span>
-          </div>
-          <div className='slider'>
-            <Carousel
-                responsive={slider}
-                infinite={true}
-            >
-              {mini.map((ele,i)=>{
-                return (
-                  <div class='item'>
-                    <div className='image'>
-                      <img src={ele?.image}></img>
-                    </div>
-                    <div className='text'>
-                      <h5>$19.98</h5>
-                      <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                    </div>
-                  </div>)
-              })}
-            </Carousel>
-          </div>
-        </section>
     </>
   )
 }

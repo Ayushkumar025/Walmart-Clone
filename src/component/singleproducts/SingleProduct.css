@@ -1,11 +1,11 @@
 .product-container .container{
     display: flex;
     padding: 30px;
-    gap: 30px;
+    gap: 50px;
 }
 
 .product-container img{
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     object-fit: contain;
 }
@@ -15,7 +15,7 @@
     
 }
 
-.product-container .container .box-1 .sub:hover{
+.product-container .container .box-1 .sub img:hover{
     border: 2px solid blue;
     border-radius: 10px;
 }
@@ -30,6 +30,10 @@
     border-radius: 10px;
 }
 
+.iiz__img:hover{
+    border: 2px solid black;
+}
+
 .product-container .container .box-2{
     flex-shrink: 0;
     width: 45%;
@@ -41,7 +45,7 @@
 }
 
 .product-container .container .box-2 .image:hover{
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .product-container .container .box-3{
@@ -116,6 +120,48 @@
     background-color: #004F9A;
 }
 
+.product-container .container .box-3 .div-7{
+    background-color: #F8F8F8;
+    padding: 20px;
+}
+
+.product-container .container .box-3 .div-7 .heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.product-container .container .box-3 .div-7 .sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-container .container .box-3 .div-7 .sub .sub-upper{
+    border: 2px solid #BABBBE;
+    border-radius: 10px;
+    width: 130px;
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-container .container .box-3 .div-7 .sub .sub-upper img{
+    align-self: center;
+}
+
+.product-container .container .box-3 .div-7 .sub .sub-upper h5{
+    align-self: center;
+}
+
+.product-container .container .box-3 .div-7 .sub span{
+    align-self: center;
+}
+
 .react-multiple-carousel__arrow--left{
     left:calc(1% + 1px) !important;
     background-color: rgba(154, 153, 153,0.5) !important;
@@ -154,3 +200,4 @@
     height: auto;
     object-fit: contain;
 }
+

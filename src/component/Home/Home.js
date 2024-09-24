@@ -9,6 +9,7 @@ import { CiHeart } from "react-icons/ci";
 import { PiToggleRight } from "react-icons/pi";
 import HoverVideoPlayer from 'react-hover-video-player';
 import { useNavigate } from 'react-router-dom';
+import data from '../data/data';
 
 function Home() {
   const responsive = {
@@ -202,6 +203,8 @@ function Home() {
 
     },
   ]
+  
+  const flashs=data.flash;
 
   const navigate=useNavigate();
   return (
@@ -761,126 +764,18 @@ function Home() {
               responsive={slider4}
               infinite={true}
           >
-            <div class='item'>
+          {flashs.map((ele,i)=>{
+            return(<div class='item'>
               <div className='image'>
-                <img src='./images/doll.webp'></img>
+                <img src={ele?.image}></img>
               </div>
               <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
+                <h5>${ele?.price}</h5>
+                <p>{ele?.description}</p>
+                <button onClick={()=>navigate("/product-details",{state:ele})}>options</button>
               </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/dogg.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/setup.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/bed.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/shirt.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/projector.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/swim.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/shoe.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/carpet.jpeg'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/cam.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/mop.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
-            <div class='item'>
-              <div className='image'>
-                <img src='./images/blanket.webp'></img>
-              </div>
-              <div className='text'>
-                <h5>$19.98</h5>
-                <p>No Boundaries Women's<br/>Buckle Moto Boots</p>
-                <button>+ Add</button>
-              </div>
-            </div>
+            </div>)
+          })}
           </Carousel>
           </div>
         </div>
