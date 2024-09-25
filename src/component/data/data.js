@@ -27,7 +27,7 @@ export default{
             id:3,
             image:'./images/f-3.webp',
             subimage1:'./images/s-3-1.webp',
-            subimage2:'./images/s-3-2.webp',
+            subimage2:'./images/s-3-2.jpeg',
             subimage3:'./images/s-3-3.webp',
             subimage4:'./images/s-3-1.webp',
             price:13.69,

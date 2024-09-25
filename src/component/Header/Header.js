@@ -15,11 +15,13 @@ import { IoGiftOutline } from "react-icons/io5";
 import { LuNewspaper } from "react-icons/lu";
 import { FaChevronUp } from "react-icons/fa6";
 import './header.css'
+import { Link } from "react-router-dom";
 
 function Header() {
     const [showCart,setshowcart]=useState(false);
     const [showorder,setshoworder]=useState(false);
     const [showaccount,setshowaccount]=useState(false);
+    const [showdpt,setshowdpt]=useState(false);
   return (
     <React.Fragment>
       <header className="mainheader">
@@ -66,7 +68,7 @@ function Header() {
         </div>
         </nav>
         <nav className="bottom-header">
-          <div className="dpt">
+          <div className="dpt" onClick={()=>setshowdpt(!showdpt)}>
             <RxDashboard />
             <h5>Departments</h5>
             <GoChevronDown />
@@ -137,7 +139,7 @@ function Header() {
       {showaccount && <div className="account-status">
         <div className="upper">
           <div className="box">
-            <a href="#"><b>Sign in or create account</b></a>
+            <a href="#"><Link to='/Login'><b>Sign in or create account</b></Link></a>
           </div>
           <hr></hr>
         </div>
@@ -147,6 +149,32 @@ function Header() {
             <li><img src="./images/walmart.svg" width={20} height={20}></img><a href="#">Walmart+</a></li>
           </ul>
         </div>
+      </div>}
+      {showdpt && <div className="departments">
+        <ul>
+          <li className="list"><a href="#"><b>All departments</b></a></li>
+          <li className="list"><a href="#">Savings</a></li>
+          <li className="list"><a href="#">Grocery</a></li>
+          <li className="list"><a href="#">New and Trending</a></li>
+          <li className="list"><a href="#">Halloween</a></li>
+          <li className="list"><a href="#">Tailgating</a></li>
+          <li className="list"><a href="#">Home, Garden & Tools</a></li>
+          <li className="list"><a href="#">Electronics & Video Games</a></li>
+          <li className="list"><a href="#">Clothing, Shoes, & Accessories</a></li>
+          <li className="list"><a href="#">Toys, Kids & Baby</a></li>
+          <li className="list"><a href="#">Beauty</a></li>
+          <li className="list"><a href="#">Personal Care</a></li>
+          <li className="list"><a href="#">Pharmacy, Health & Wellness</a></li>
+          <li className="list"><a href="#">Auto & Tires</a></li>
+          <li className="list"><a href="#">Household Essentials</a></li>
+          <li className="list"><a href="#">Pets</a></li>
+          <li className="list"><a href="#">Sports & Outdoors</a></li>
+          <li className="list"><a href="#">Office & School Supplies</a></li>
+          <li className="list"><a href="#">Seasonal Decor & Party Supplies</a></li>
+          <li className="list"><a href="#">Movies, Music & Books</a></li>
+          <li className="list"><a href="#">Gift Cards</a></li>
+          <li className="list"><a href="#">Shop With Purpose</a></li>
+        </ul>
       </div>}
     </React.Fragment>
   );

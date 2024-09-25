@@ -1,0 +1,58 @@
+.login .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.login .container .container-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.login .container .container-1 .head{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.login .container .container-1 .head-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.login .container .container-1 .head-2 .first{
+    padding-left: 25px;
+}
+
+.login .container .container-2 span{
+    font-weight: bold;
+}
+
+.login .container .container-2 input{
+    width: 330px;
+    height: 55px;
+}
+
+.login .container .container-2 button{
+    background-color: #0071dc;
+    color: #ffffff;
+    border-radius: 32px;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login .container .container-2 button:hover{
+    background-color: #02396d;
+}
+
+.login .container .container-2 .first{
+    font-weight: normal;
+}
+
+.login .container .container-2 .second{
+    font-weight: normal;
+    text-decoration: underline;
+}

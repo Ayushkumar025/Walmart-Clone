@@ -286,4 +286,38 @@
     text-decoration: underline;
 }
 
+.departments{
+    background-color: white;
+    color: gray;
+    position: absolute ;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    left: 1.5%;
+    top: 22.6%;
+    border-radius: 0 0 10px 10px;
+    font-size: 13px;
+    z-index: 100;
+    padding: 10px;
+}
+
+.departments ul{
+    
+}
+
+.departments ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+.departments ul li:hover{
+    background-color: #f2f8fd;
+}
+
+.departments ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
 
